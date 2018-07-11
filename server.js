@@ -38,6 +38,12 @@ app.get('/robots/:index/edit', (req, res) => {
 	});
 });
 
+// Delete Route from Edit Page
+app.delete('/robots/:index/edit', (req, res) => {
+	Robots.splice(req.params.index, 1);
+	res.redirect('/robots');
+})
+
 app.listen(3000, () => {
 	console.log('I am listening on port 3000');
 });
