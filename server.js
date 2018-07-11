@@ -38,6 +38,11 @@ app.get('/robots/:index/edit', (req, res) => {
 	});
 });
 
+// PUT Request
+app.put('/robots/:index', (req, res) => {
+	Robots[req.params.index] = req.body;
+	res.redirect('/robots');
+});
 
 app.listen(3000, () => {
 	console.log('I am listening on port 3000');
