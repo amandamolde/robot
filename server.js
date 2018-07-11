@@ -16,6 +16,13 @@ app.get('/robots', (req, res) => {
 	});
 });
 
+// Show Route
+app.get('/robots/:index', (req, res) => {
+	res.render('show.ejs', {
+		robot: Robots[req.params.index]
+	});
+});
+
 // Delete Route
 app.delete('/robots/:index', (req, res) => {
 	Robots.splice(req.params.index, 1);
