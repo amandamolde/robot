@@ -10,7 +10,7 @@
 	<ul>
 		<% for(let i = 0; i < robots.length; i++) { %>
 			<h2><%= robots[i].name %></h2>
-			<form>
+			<form method="POST" action="/robots/<%=i%>?_method=DELETE">
 				<input type="submit" value="DELETE">
 			</form>
 		<% } %>
