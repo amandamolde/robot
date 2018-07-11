@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Edit Robot Page</h1>
+
+	<form method="POST" action="/robots/<%= index %>?_method=PUT">
+		Name: <input type="text" name="name" value="<%= robot.name %>">
+		Homeworld: <input type="text" name="homeworld" value="<%= robot.homeworld %>">
+		Affiliation: <input type="text" name="affiliation" value="<%= robot.affiliation %>">
+		Color: <input type="text" name="color" value="<%= robot.color %>">
+		<br/>
+		<input type="submit" value="Submit Changes">
+	</form>
+
+</body>
+</html>

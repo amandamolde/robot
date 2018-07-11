@@ -16,9 +16,18 @@ app.get('/robots', (req, res) => {
 	});
 });
 
+// Delete Route
 app.delete('/robots/:index', (req, res) => {
 	Robots.splice(req.params.index, 1);
 	res.redirect('/robots');
+});
+
+// Edit Route
+app.get('/robots/:index/edit', (req, res) => {
+	res.render('edit.ejs', {
+		robot: Robots[req.params.index],
+		index: req.params.index,
+	});
 });
 
 app.listen(3000, () => {
