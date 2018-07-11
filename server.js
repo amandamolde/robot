@@ -19,7 +19,8 @@ app.get('/robots', (req, res) => {
 // Show Route
 app.get('/robots/:index', (req, res) => {
 	res.render('show.ejs', {
-		robot: Robots[req.params.index]
+		robot: Robots[req.params.index],
+		index: req.params.index,
 	});
 });
 
