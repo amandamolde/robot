@@ -4,10 +4,15 @@
 	<title></title>
 </head>
 <body>
+	
 	<h1>Robots Index Page</h1>
+	
 	<ul>
 		<% for(let i = 0; i < robots.length; i++) { %>
 			<h2><%= robots[i].name %></h2>
+			<form>
+				<input type="submit" value="DELETE">
+			</form>
 		<% } %>
 	</ul>
 </body>
